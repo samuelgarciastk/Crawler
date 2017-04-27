@@ -107,7 +107,7 @@ public class Crawl {
             sb.append("[Answer ").append(i).append("]:").append(answerText.html()).append("\n");
             Element answerVote = answer.select(".votecell > .vote > .vote-count-post").first();
             sb.append("[Answer ").append(i).append(" Vote]:").append(answerVote.text()).append("\n");
-            Elements comments = answers.select(".comment-copy");
+            Elements comments = answer.select(".comment-copy");
             if (comments == null) break;
             int j = 1;
             for (Element comment : comments) {
